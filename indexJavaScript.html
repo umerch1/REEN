@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="/index.js"></script>
+</head>
+
+<body>
+    <input type="text" name="first" id="first" step="any">
+    <select id="opt">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">x</option>
+        <option value="/">/</option>
+
+    </select>
+    <input type="text" name="second" id="second" step="any"><br>
+    <button type="button" onclick="cal()">
+        Caluclate
+    </button>
+    <input type="text" name="readonly" id="readonly" step="any" readonly>
+
+    <script>
+        function cal() {
+            let opr1 = document.getElementById('first').value;
+            let opr2 = document.getElementById('second').value;
+            let opr = document.getElementById('opt').value;
+            let res;
+            if (opr == '+') {
+                res = parseInt(opr1) + parseInt(opr2)
+            }
+            if (opr == '-') {
+                res = parseInt(opr1) - parseInt(opr2)
+            } if (opr == '*') {
+                res = parseInt(opr1) * parseInt(opr2)
+            } if (opr == '/') {
+                res = parseInt(opr1) / parseInt(opr2)
+            }
+
+            document.getElementById('readonly').value = res;
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main {
+            text-align: center;
+            color: red;
+            font-size: 56px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id="main" onmouseenter="modify()" onmouseleave="unModify()">
+        Hello World
+    </div>
+    <script>
+        function modify() {
+            document.getElementById('main').style.fontSize = "76px";
+        }
+        function unModify() {
+            document.getElementById('main').style.fontSize = "56px";
+        }
+
+    </script> -->
+
+    <script>
+
+        // const c = function Add(a, b) {
+        //     return document.write(a + b)
+        // }
+
+
+        // document.write(c(15, 5));
+        // document.write("<br>")
+        // document.write(c(52, 15));
+        // document.write("<br>");
+        // document.write(Add(192, 15));
+        // document.write("<br>")
+        // document.write(Add(152, 15));
+        // document.write("<br>")
+        // document.write(Add(42, 15));
+        // document.write("<br>")
+        // setTimeout(() => {
+        //     document.write("Hello Umer")
+        // }, 1000);
+        // let a = 1;
+
+
+        // document.write(a)
+        // for (let i = 0; i <= 100; i++) {
+        //     document.write(i + "<br>")
+
+        // }
+        // let a = 1
+        // do {
+        //     let c = a++
+        //     document.write(c)
+        // } while (a < 1);
+        // let a = "increament";
+        // let b = 5;
+        // let c = 4
+        // switch (a) {
+        //     case "increament":
+        //         document.write(b + c)
+        //         break;
+        //     case "decrement":
+        //         document.write(b - c)
+        //     default:
+        //         document.write("Not increament and decreament")
+        //         break;
+        // }
+        // let user = new Object();
+        // let user = {
+        //     name: "Umar",
+        //     age: 22,
+        //     degree: "BSCS",
+        //     person: "man"
+        // }
+        // let day = 'monday'
+        // user['age' + day] = 56;
+        // let codes = {
+        //     "49": "Germany",
+        //     "41": "Switzerland",
+        //     "44": "Great Britain",
+        //     "1": "USA"
+        // };
+        // let a = {};
+        // let b = a
+
+        // document.write(a === b)
+
+        // let user = { name: "John", age: 30, kid: { class: "9th" } };
+        // let clone = {}; // the new empty object
+        // // let's copy all user properties into it
+        // console.log(user)
+        // console.log(clone)
+        // // for (let key in user) { clone[key] = user[key]; }
+        // // Object.assign(clone, user)
+        // user = JSON.stringify(user);
+        // document.write(user);
+        // let vu = JSON.parse(user)
+        // clone = JSON.parse
+        // console.log("after user value copy into clone object")
+        // console.log(vu)
+
+        // document.write(person.name)
+
+        // for (let key in codes) {
+        //     // console.log(key)
+        //     console.log(codes[key])
+        // }
+        // document.write(user)
+        // document.write(typeof (b))
+        // let user = { name: "Umer" }
+        // let permission = { active: false }
+        // let permission2 = { active3: true }
+
+        // let mergeObject = Object.assign(user, permission, permission2)
+        // console.log(mergeObject)
+
+        // const user = { name: "John" }
+        // user.age = 25; // (*)
+        // console.log(user.age); // 25
+        // console.log(user)
+        // let user = { name: "John" }
+        // let descriptor = Object.getOwnPropertyDescriptor(user, 'name');
+
+        // console.log(descriptor)
+        // let user = {};
+        // Object.defineProperty(user, "age", { value: 22, writable: false });
+        // let descriptor = Object.getOwnPropertyDescriptor(user, 'age');
+        // user.age = 26;
+        // console.log(JSON.stringify(descriptor));
+
+        // function makeUser(name, age) {
+        //     return {
+        //         name,
+        //         age
+        //         // ...other properties
+        //     };
+        // }
+        // let user = makeUser("Umar", 12);
+        // alert(user.name); // John
+
+        // let user = {
+        //     name: "Umar",
+        //     age: 21,
+        //     getAge: function () {
+        //         console.log(this.age)
+        //     }
+        // }
+        // user.getAge();
+        // let person = {
+        //     getUser: function () {
+        //         return this.name + "  " + this.age
+        //     }
+        // }
+        // let person1 = {
+        //     name: "Umar",
+        //     age: 25
+        // }
+
+        // console.log(person.getUser.call(person1))
+
+        var person = {
+            fullName: function (city, country) {
+                return this.firstName + " " + this.lastName + "," + city + "," + country;
+            }
+        }
+        var person1 = {
+            firstName: "Umar",
+            lastName: "Farooq"
+        }
+        let user = person.fullName.apply(person1, ["Lahore", "Pakistan"]);
+        console.log(user)
+
+    </script>
+</body>
+
+</html>

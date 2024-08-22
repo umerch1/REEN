@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1></h1>
+
+    <script>
+
+        function clock() {
+            let date = new Date();
+            let h = date.getHours();
+            let s = date.getSeconds();
+            let m = date.getMinutes();
+            let session
+            session = h < 12 ? "AM" : "PM";
+            if (h > 12) {
+                h = h - 12
+            }
+            h = h < 10 ? "0" + h : h;
+            s = s < 10 ? "0" + s : s;
+            m = m < 10 ? "0" + m : m;
+
+
+
+            let time = h + " : " + m + " : " + s + session;
+
+            document.getElementsByTagName('h1')[0].innerHTML = time;
+
+        }
+        setInterval(() => {
+            clock();
+        }, 1000);
+
+
+    </script>
+</body>
+
+</html>
