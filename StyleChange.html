@@ -169,17 +169,113 @@
 
         // console.log(person.getUser.call(person1))
 
-        var person = {
-            fullName: function (city, country) {
-                return this.firstName + " " + this.lastName + "," + city + "," + country;
-            }
-        }
-        var person1 = {
-            firstName: "Umar",
-            lastName: "Farooq"
-        }
-        let user = person.fullName.apply(person1, ["Lahore", "Pakistan"]);
-        console.log(user)
+        // var person = {
+        //     fullName: function (city, country) {
+        //         return this.firstName + " " + this.lastName + "," + city + "," + country;
+        //     }
+        // }
+        // var person1 = {
+        //     firstName: "Umar",
+        //     lastName: "Farooq"
+        // }
+        // let user = person.fullName.apply(person1, ["Lahore", "Pakistan"]);
+        // console.log(user)
+
+        // function add(a, b) { return a + b; } //normal function before ES5
+        // var add = (a, b) => a + b; //arrow function
+        // const person={
+        //     name:"Umar",
+        //     age:'2',
+        //     add:(a,b)=>{
+        //         return console.log(this.age)
+        //     }
+        // }
+        // console.log(person.add())
+        // const numbers = [1, 2, 3];
+        // const doubled = numbers.map(n => 2 * n);
+        // console.log(doubled)
+
+        // const test = {
+        //     name: 'test object',
+        //     createAnonFunction: function () {
+        //         return function () {
+        //             console.log(this.name); console.log(arguments);
+        //         }
+        //     },
+        //     createArrowFunction: function () {
+        //         return () => {
+        //             console.log(this.name); console.log(arguments);
+        //         }
+        //     }
+        // };
+        // test.createArrowFunction('hello', 'world')
+        // var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        // let b = fruits.join(" * ");
+        // console.log(typeof (b))
+        // const months = ['March', 'Jan', 'Feb', 'Dec'];
+        // months.sort();
+        // console.log(months);
+        // expected output: Array ["Dec", "Feb", "Jan", "March"]
+
+        // const numbers = [1, 30, 4, 21, 100000];
+        // function compare(a, b) {
+        //     if (a < b) {
+        //         return -1;
+        //     }
+        //     if (a > b) {
+        //         return 1;
+        //     }
+        //     // a must be equal to b
+        //     return 0;
+        // }
+        // numbers.sort((a, b) => a - b);
+
+        // console.log(numbers);
+        // expected output: Array [1, 100000, 21, 30, 4]
+        // let arr = ["I", "study", "JavaScript"];
+        // arr.splice(1, 2); // from index 1 remove 1 element & return the removed element
+        // console.log(arr); // ["I", "JavaScript"]
+
+        // let arr = [1, 2, 3, 4, 6, 5];
+        // let arr1 = [8, 9, 0, 4, 15, 5];
+        // let numbers = [1, 30, 4, 21, 100000];
+
+        // // from index -1 (one step from the end)
+        // // delete 0 elements,
+        // // then insert 3 and 4
+        // let remove = arr.concat(arr1, numbers)
+        // alert(remove)
+
+        // alert(typeof {}); // object
+        // alert(typeof []); // same
+        // let fruits = ["Apple", "Orange", "Plum", "Mengo"];
+        // iterates over array elements
+        // for (let fruit of fruits) {
+        //     console.log(fruit);
+        // }
+        // fruits.forEach((item, index, array) => {
+        //     console.log(array[index])
+        // })
+        // let temp = [1, 2, 3, 4, 34, 73, 53, 32]
+
+        // // let newVariable = temp.map((item, index, array) => {
+        // //     return item * 5
+        // // })
+        // let result = temp.filter((item, index, array) => {
+        //     // if true is returned, item is returned and iteration is stopped
+        //     // for falsy scenario returns undefined
+        //     return array[index] == 3
+        // });
+
+        // console.log(result)
+        let users = [
+            { id: 1, name: "John" },
+            { id: 2, name: "Pete" },
+            { id: 3, name: "Mary" }
+        ];
+        // returns array of the first two users
+        let someUsers = users.filter(item => item.id < 3);
+        console.log(someUsers); // 2
 
     </script>
 </body>

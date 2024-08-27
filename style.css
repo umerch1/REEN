@@ -1,0 +1,61 @@
+p1 {
+    background-color: aqua;
+    font-size: large;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+
+    background-image: url(decor.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+ul {
+    text-align: left;
+}
+
+table {
+    border: 10px solid black;
+    padding-bottom: 20px;
+    outline-width: 5px;
+
+}
+
+th {
+    text-decoration-style: solid;
+    font-style: italic;
+}
+
+td {
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: blueviolet;
+
+}
+
+button {
+    background-color: transparent;
+    transform: background-color 1s ease-in-out;
+    color: black;
+    padding: 15px 30px;
+    display: inline;
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 0%;
+    margin-left: 60%;
+
+}
+
+button:hover {
+    background-color: aqua;
+    border-color: blueviolet;
+}
+
+img {
+
+    float: left;
+
+}
