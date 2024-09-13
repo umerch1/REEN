@@ -287,19 +287,107 @@
         // let address = `My address is ${city}, ${state}, ${country}`
         // console.log(address);
 
-  const a = "Hello"
+        //   const a = "Hello"
 
-        function name(params) {
-            b = "Hello"
-            const a = "World"
-            console.log(a)
-        }
-        name()
-        console.log(a)
-      
+        //         function name(params) {
+        //             b = "Hello"
+        //             const a = "World"
+        //             console.log(a)
+        //         }
+        //         name()
+        //         console.log(a)
+
         // let a;
+        // let example1 = [1, 2, 3, 4]
+        // let example2 = [...example1, 5]
+        // // example2.push(5)
+        // console.log(example2); //1,2,3,4,5
+        // console.log(example1); //1,2,3,4
         // const b="jds"
+        // let objOne = { name: "sabir", class: 18 }
+        // let objTwo = { ...objOne }
+        // objTwo.age = 30
 
+        // console.log(objOne)
+        // console.log(objTwo)
+
+        // let myPromise = new Promise(function (myResolve, myReject) {
+        //     let x = 0;
+
+        //     // some code (try to change x to 5)
+
+        //     if (x == 0) {
+        //         myResolve("OK");
+        //     } else {
+        //         myReject("Error");
+        //     }
+        // });
+
+        // myPromise.then(
+        //     function (value) { console.log(value); },
+        //     function (error) { console.log(error); }
+        // );
+        // function a(callback) {
+        //     setTimeout(() => {
+        //         console.log("result of a()");
+        //         callback();
+        //     }, 5000); // 1 second delay
+        // }
+
+        // function b(callback) {
+        //     setTimeout(() => {
+        //         console.log("result of b()");
+        //         callback();
+        //     }, 2500); // 0.5 second delay
+        // }
+
+        // function c(callback) {
+        //     setTimeout(() => {
+        //         console.log("result of c()");
+        //         callback();
+        //     }, 10000); // 1.1 second delay
+        // }
+
+        // a(() => b(() => c(() => console.log("c() is done!"))));
+
+        // let rain = new Promise((resolved, reject) => {
+        //     let today = "rain";
+        //     let yesterday = "rain"
+        //     if (today == "rain") {
+        //         resolved()
+        //     } else {
+        //         reject()
+        //     }
+
+        // })
+        // rain.then(() => console.log("today rain"))
+        //     .catch(() => console.log("Today is not rain"))
+        // let myPromise = new Promise((resolved, reject) => {
+        //     let softwareHouse = "Ebridges";
+        //     let house = "Ebridge";
+        //     if (softwareHouse === house) {
+        //         resolved()
+        //     } else {
+        //         let error = "String not equal"
+        //         reject(error)
+        //     }
+        // })
+
+        // myPromise.then(() => console.log("Yes this string is equal")).catch((error) => {
+        //     console.log(error)
+        // })
+
+        // fetch('https://jsonplaceholder.typicode.com/todos/1')
+        //     .then(res => res.json())
+        //     .then(data => console.log("Hello", data))
+        //     .catch(err => console.log("reject", err));
+        let api = 'https://jsonplaceholder.typicode.com/todos/1'
+        const getData = async () => {
+            const res = await fetch(api);
+            const json = await res.json();
+            console.log(json);
+        }
+        getData();
     </script>
 </body>
 
